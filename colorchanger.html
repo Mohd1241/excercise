@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colorChanger</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Attach event listeners after the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            const buttons = document.querySelectorAll(".box button");
+            const body = document.querySelector("body");
+
+            buttons.forEach(function(button) {
+                button.addEventListener("click", function() {
+                    if (button.id === "box1") {
+                        body.style.backgroundColor = "red";
+                    } else if (button.id === "box2") {
+                        body.style.backgroundColor = "green";
+                    } else if (button.id === "box3") {
+                        body.style.backgroundColor = "blue";
+                    } else if (button.id === "box4") {
+                        body.style.backgroundColor = "white";
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="Back">
+        <h2>Background color changer</h2>
+        <hr>
+        <img src="color.png" class="imgsize">
+        <div>
+            <h3>Click below to change the background color</h3>
+            <div class="box">
+                <button class="box" id="box1">Red</button>
+                <button class="box" id="box2">Green</button>
+                <button class="box" id="box3">Blue</button>
+                <button class="box" id="box4">White</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
